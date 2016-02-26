@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{user.name}}'s Profile</title> 
+<style >
+body {
+font-family: arial;
+background-color: rgb(185.179.175);
+text-align: left;
+}
+
+h1 {
+font-family: arial;
+}
+
+p {
+font-family: arial;
+}
+    .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<p>
+Info:
+<li>Name: {{user.name}}</li>
+<li>User Name: {{user.uname}}</li>
+<li>Email: {{user.email}}</li>
+
+</p>
+
+<p>Assigned Bugs
+{%- for bug in bugs%}
+<li><a href="/indv_bug/{{bug.bug_id}}">{{bug.title}}</a></li>
+{%- endfor%}
+</p>
+
+<p>
+<a href="/add_bug" class="button" role="button">Add new Bug</a><br>
+<a href="/add_change_log" class="button" role="button">Add Change Log Entry</a>
+</p>
+
+<p>
+
+
+</p>
+</body>
+</html>

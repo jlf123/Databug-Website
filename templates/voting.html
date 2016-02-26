@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>50 of the highest voted bugs</title>
+<style >
+body {
+font-family: arial;
+background-color: red
+text-align: left;
+}
+
+h1 {
+font-family: arial;
+}
+
+p {
+font-family: arial;
+}
+</style>
+</head>
+
+<h1>Highest Voted Bugs</h1>
+
+<body>
+{% for bug in bugs%}
+<li><a href="indv_bug/{{bug.id}}">{{bug.title}}</a> with {{bug.total}} votes</li>
+{% endfor %}
+</body>
+</html>

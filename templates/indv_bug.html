@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{bug.title}}</title>
+</head>
+<h1>{{bug.title}}</h1>
+<body>
+<p>Author: <a href="/user_profile/{{bug.author}}">{{bug.author}}</a></p>
+<p>Opened on: {{bug.open}}</p>
+<p>Closed on:{% if bug.close%} {{bug.close}} {% endif %}</p>
+<p>Assigned to: {{bug.auser}}</p>
+<p>Tags: {% for tag in tags %} <li>tag.title</li> {% endfor %} </p>
+<p>{{bug.text}}</p>
+
+
+
+</p>
+
+</body>
+</html>

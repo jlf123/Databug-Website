@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title> 
+<style >
+body {
+font-family: arial;
+background-color: rgb(185.179.175);
+text-align: left;
+}
+
+h1 {
+font-family: arial;
+}
+
+
+</style>
+<style >
+body {
+font-family: arial;
+background-color: rgb(185.179.175);
+text-align: left;
+}
+
+h1 {
+font-family: arial;
+}
+
+p {
+font-family: arial;
+}
+</style>
+</head>
+<body>
+
+<h1>Login with your username/password</h1>
+
+<section class="loginform cf">
+<form name="login" action="" method="post" accept-charset="utf-8">
+
+<li><label for="username">User Name</label>
+<input type="text" name="username" placeholder="username" required></li>
+<li><label for="password">Password</label>
+<input type="password" name="password" placeholder="password" required></li>
+<li>
+<input type="submit" value="Login"></li>
+</form>
+    {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}</p>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Log</title>
+</head>
+<body>
+
+{% for bug in bugs %}
+
+<p>
+<li>
+    <a href="/indv_bug/{{bug.id}}">{{bug.title}}</a>
+     <br>Last Viewed by: {{bug.last_viewed}}
+     <br>Date Closed: {%if bug.close %} {{bug.close}} by {{bug.user_close}} {%endif%}
+     <br>Patch Date: {% if bug.patch_date%} {{bug.patch_date}} {% endif %}
+     <br>Comments: {{ bug.comment }}
+
+</li>
+</p>
+
+{% endfor %}
+
+</body>
+</html>
